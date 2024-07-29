@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive grid */
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.thumbnail {
+    cursor: grab;
+    width: 100px; /* Thumbnail size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#container {
+    position: relative;
+    height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.draggable {
+    cursor: grab;
+    position: absolute; /* Allow absolute positioning for dragging */
+}
