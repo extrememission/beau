@@ -55,10 +55,19 @@ function handleThumbnailDrag(e) {
     makeDraggable(newImg);
 }
 
+function clearContainer() {
+    const container = document.getElementById('container');
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+}
+
 document.querySelectorAll('.thumbnail').forEach(function(element) {
     element.addEventListener('mousedown', handleThumbnailDrag);
     element.addEventListener('touchstart', handleThumbnailDrag);
 });
+
+document.getElementById('startOver').addEventListener('click', clearContainer);
 
 function goToHomePage() {
     window.location.href = "https://beaufun.brizy.site/";
